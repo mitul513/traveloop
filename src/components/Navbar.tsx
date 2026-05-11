@@ -1,11 +1,15 @@
 "use client";
 
 
+
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Globe, LayoutDashboard, Map, PlaneTakeoff } from "lucide-react";
+
+
 
 
 const navItems = [
@@ -15,9 +19,13 @@ const navItems = [
 ];
 
 
+
+
 export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+
+
 
 
   useEffect(() => {
@@ -27,6 +35,8 @@ export default function Navbar() {
   }, []);
 
 
+
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -34,8 +44,3 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <nav
-          className={`flex items-center justify-between px-6 py-3 rounded-2xl transition-all duration-300 ${
-            scrolled
-              ? "bg-white/90 backdrop-blur-md border border-surface-700 shadow-sm"
-              : "bg-white/50 backdrop-blur-sm border border-transparent"
