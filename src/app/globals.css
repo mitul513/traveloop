@@ -3,9 +3,17 @@
 
 
 
+
+
+
+
 @theme {
   --font-sans: "Outfit", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+
+
+
 
 
 
@@ -34,7 +42,3 @@
   --color-surface-800: #f4f4f5; /* Light gray */
   --color-surface-700: #e4e4e7;
   --color-surface-600: #d4d4d8;
-  
-  /* Text colors */
-  --color-text-main: #09090b;
-  --color-text-muted: #52525b;
