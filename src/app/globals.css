@@ -7,9 +7,25 @@
 
 
 
+
+
+
+
+
+
+
+
 @theme {
   --font-sans: "Outfit", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+
+
+
+
+
+
+
 
 
 
@@ -34,11 +50,3 @@
   --color-sky-400: #0ea5e9;
   --color-sky-500: #0284c7;
   --color-palm-400: #22c55e;
-  --color-palm-500: #16a34a;
-  
-  /* Bright Surface Colors */
-  --color-surface-950: #ffffff; /* Pure White */
-  --color-surface-900: #fafafa; /* Off-white */
-  --color-surface-800: #f4f4f5; /* Light gray */
-  --color-surface-700: #e4e4e7;
-  --color-surface-600: #d4d4d8;
