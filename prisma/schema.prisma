@@ -3,9 +3,11 @@ generator client {
   output   = "../src/generated/prisma"
 }
 
+
 datasource db {
   provider = "sqlite"
 }
+
 
 model User {
   id    String @id @default(uuid())
@@ -13,6 +15,7 @@ model User {
   name  String
   trips Trip[]
 }
+
 
 model Trip {
   id          String          @id @default(uuid())
@@ -28,44 +31,10 @@ model Trip {
   notes       Note[]
 }
 
+
 model Stop {
   id         String     @id @default(uuid())
   tripId     String
   trip       Trip       @relation(fields: [tripId], references: [id], onDelete: Cascade)
   cityName   String
   country    String
-  arrival    DateTime
-  departure  DateTime
-  orderIndex Int
-  activities Activity[]
-  notes      Note[]
-}
-
-model Activity {
-  id       String @id @default(uuid())
-  stopId   String
-  stop     Stop   @relation(fields: [stopId], references: [id], onDelete: Cascade)
-  name     String
-  category String
-  cost     Float  @default(0.0)
-  duration Int    @default(60)
-}
-
-model ChecklistItem {
-  id       String  @id @default(uuid())
-  tripId   String
-  trip     Trip    @relation(fields: [tripId], references: [id], onDelete: Cascade)
-  itemName String
-  category String
-  isPacked Boolean @default(false)
-}
-
-model Note {
-  id        String   @id @default(uuid())
-  tripId    String
-  trip      Trip     @relation(fields: [tripId], references: [id], onDelete: Cascade)
-  stopId    String?
-  stop      Stop?    @relation(fields: [stopId], references: [id], onDelete: SetNull)
-  content   String
-  timestamp DateTime @default(now())
-}
