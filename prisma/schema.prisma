@@ -4,9 +4,13 @@ generator client {
 }
 
 
+
+
 datasource db {
   provider = "sqlite"
 }
+
+
 
 
 model User {
@@ -15,6 +19,8 @@ model User {
   name  String
   trips Trip[]
 }
+
+
 
 
 model Trip {
@@ -32,9 +38,7 @@ model Trip {
 }
 
 
+
+
 model Stop {
   id         String     @id @default(uuid())
-  tripId     String
-  trip       Trip       @relation(fields: [tripId], references: [id], onDelete: Cascade)
-  cityName   String
-  country    String
