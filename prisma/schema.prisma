@@ -6,9 +6,17 @@ generator client {
 
 
 
+
+
+
+
 datasource db {
   provider = "sqlite"
 }
+
+
+
+
 
 
 
@@ -19,6 +27,10 @@ model User {
   name  String
   trips Trip[]
 }
+
+
+
+
 
 
 
@@ -40,5 +52,10 @@ model Trip {
 
 
 
+
+
+
+
 model Stop {
   id         String     @id @default(uuid())
+
