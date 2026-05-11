@@ -3,6 +3,10 @@
 
 
 
+
+
+
+
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
@@ -24,6 +28,10 @@ import Navbar from "@/components/Navbar";
 
 
 
+
+
+
+
 const features = [
   {
     icon: Map,
@@ -34,7 +42,3 @@ const features = [
   },
   {
     icon: Compass,
-    title: "Activity Planner",
-    desc: "Organize sightseeing, dining, and adventures per destination.",
-    bg: "bg-sunset-500/10",
-    iconColor: "text-sunset-600",
