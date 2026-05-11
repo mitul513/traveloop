@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 
+
+
 @theme {
   --font-sans: "Outfit", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+
 
 
   /* ── 2027 Premium Bright Travel Palette ──────────── */
@@ -34,5 +38,3 @@
   /* Text colors */
   --color-text-main: #09090b;
   --color-text-muted: #52525b;
-  --color-text-light: #71717a;
-}
